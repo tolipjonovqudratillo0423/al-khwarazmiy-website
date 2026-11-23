@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom scrollbar for modern sleek look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #00265B 0%, #0047AB 50%, #3BAAFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-pattern {
+  background-color: #00265B;
+  background-image: radial-gradient(rgba(59, 170, 255, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Button & Card Micro-Interactions */
+.btn-hover {
+  @apply transition-all duration-300 active:scale-95 select-none;
+}
+
+.card-hover {
+  @apply transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl;
+}
+
+/* Floating animation */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* Shimmer placeholder animation */
+@keyframes shimmerPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmerPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Infinite Marquee Lenta Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marqueeReverse 32s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Active Floating Math Animations */
+@keyframes mathFloat1 {
+  0%, 100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(16px, -38px) rotate(6deg);
+  }
+  50% {
+    transform: translate(-14px, -70px) rotate(-5deg);
+  }
+  75% {
+    transform: translate(-20px, -32px) rotate(3deg);
+  }
+}
+
+@keyframes mathFloat2 {
+  0%, 100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  30% {
+    transform: translate(-22px, -48px) rotate(-8deg);
+  }
+  60% {
+    transform: translate(18px, -24px) rotate(7deg);
+  }
+  85% {
+    transform: translate(10px, -60px) rotate(-3deg);
+  }
+}
+
+@keyframes mathFloat3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(18px, -55px) scale(1.15) rotate(10deg);
+  }
+}
+
+/* Moving Newspaper Background */
+@keyframes newspaperDrift {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-30px, -35px) scale(1.04) rotate(1deg);
+  }
+  100% {
+    transform: translate(25px, -20px) scale(1.02) rotate(-1deg);
+  }
+}
+
+/* Gazette fast horizontal scroll */
+@keyframes gazetteScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-gazette-scroll {
+  display: flex;
+  width: max-content;
+  animation: gazetteScroll 18s linear infinite;
+}
+
+.animate-gazette-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Gazette floating icons */
+@keyframes gazetteFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.06;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.1);
+    opacity: 0.12;
+  }
+}
+
+.animate-gazette-float {
+  animation: gazetteFloat 6s ease-in-out infinite;
+}

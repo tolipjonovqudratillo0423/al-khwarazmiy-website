@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables & secrets (API keys, Telegram tokens, DB URLs)
+.env
+.env.*
+
+# Scraped media / local data (usually too large for Git)
+downloaded_photos/
+# extracted_tg_posts.json   <-- uncomment if you don't want this data on GitHub
+
+# Logs & OS/Editor files
+*.log
+npm-debug.log*
+.DS_Store
+.vscode/

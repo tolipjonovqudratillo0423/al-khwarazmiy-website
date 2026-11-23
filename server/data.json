@@ -1,0 +1,334 @@
+{
+  "admin": {
+    "username": "tqmtqmtqm04232010al-khwarazmi-fergana.uz",
+    "passwordHash": "$2b$10$5hKkw2IRrAWPqd2jIOC59emzToKo51LLgcOgpbCXKpLVsoMd6sqw2",
+    "name": "Bosh Administrator",
+    "email": "admin@alxorazmiy-fergana.uz"
+  },
+  "stats": {
+    "students": "540+",
+    "teachers": "52+",
+    "laboratories": "14+",
+    "olympiadWinners": "68+",
+    "grantsWon": "15+"
+  },
+  "gazettes": [
+    {
+      "id": "gazette-1795433862899",
+      "title": "Al-Xorazmiy Ziyo Gazetasi",
+      "subtitle": "Maktab gazetasining maxsus nashri",
+      "date": "2026-11-23",
+      "edition": "2026-yil",
+      "coverImage": "/assets/photos/school_photo_7.jpg",
+      "description": "adminXorazmiy2026!adminXorazmiy2026!adminXorazmiy2026!adminXorazmiy2026!adminXorazmiy2026!adminXorazmiy2026!",
+      "articlesCount": 6,
+      "downloadUrl": "#"
+    }
+  ],
+  "news": [
+    {
+      "id": "news-1795433777291",
+      "slug": "23456789",
+      "title": "23456789",
+      "category": "Ta'lim va Metodika",
+      "date": "2026-11-23",
+      "author": "Matbuot xizmati",
+      "coverImage": "/assets/uploads/upload-1795433766039-914.png",
+      "excerpt": "wertyui",
+      "content": "ertyuio",
+      "tags": [
+        "Yangiliklar",
+        "Maktab"
+      ],
+      "views": 3,
+      "featured": false
+    }
+  ],
+  "messages": [],
+  "teachers": [
+    {
+      "id": "lead-1",
+      "name": "To'ychiyev Jasurbek Ravshanovich",
+      "role": "Filial Direktori",
+      "category": "Rahbariyat",
+      "department": "Boshqaruv",
+      "toifa": "Oliy toifali rahbar",
+      "education": "O'zbekiston Milliy Universiteti",
+      "experience": "16 yil pedagogik va boshqaruv staji",
+      "score": "IT va ixtisoslashtirilgan ta'lim a'lochisi",
+      "reception": "Dushanba - Juma: 14:00 - 17:00",
+      "email": "director@alxorazmiy-fergana.uz",
+      "phone": "+998 (73) 244-01-20",
+      "badge": "Direktor",
+      "image": ""
+    },
+    {
+      "id": "lead-2",
+      "name": "Sobirova Gulnoza Mahmudovna",
+      "role": "O'quv ishlari bo'yicha direktor o'rinbosari",
+      "category": "Rahbariyat",
+      "department": "O'quv bo'limi",
+      "toifa": "Oliy toifa • Fan nomzodi (PhD)",
+      "education": "Farg'ona Davlat Universiteti (Magistratura)",
+      "experience": "14 yil ilmiy-pedagogik faoliyat",
+      "score": "Cambridge xalqaro ta'lim standarti koordinatori",
+      "reception": "Seshanba, Payshanba: 15:00 - 17:00",
+      "email": "oquv@alxorazmiy-fergana.uz",
+      "phone": "+998 (73) 244-01-21",
+      "badge": "Direktor o'rinbosari",
+      "image": ""
+    },
+    {
+      "id": "lead-3",
+      "name": "Rahimov Elyorbek Baxtiyorovich",
+      "role": "Ma'naviy-ma'rifiy ishlar bo'yicha direktor o'rinbosari",
+      "category": "Rahbariyat",
+      "department": "Tarbiyaviy ishlar",
+      "toifa": "Oliy toifali mutaxassis",
+      "education": "Toshkent Davlat Pedagogika Universiteti",
+      "experience": "11 yil ish staji",
+      "score": "Yoshlar yetakchisi va ijtimoiy loyihalar kuratori",
+      "reception": "Dushanba, Chorshanba: 14:00 - 16:30",
+      "email": "manaviyat@alxorazmiy-fergana.uz",
+      "phone": "+998 (73) 244-01-22",
+      "badge": "Direktor o'rinbosari",
+      "image": ""
+    },
+    {
+      "id": "teach-1",
+      "name": "Ergashev Rustambek Alisherovich",
+      "role": "Matematika fani katta o'qituvchisi",
+      "category": "Pedagoglar",
+      "department": "Matematika",
+      "toifa": "Oliy toifa • Xalqaro Olimpiada Ustozi",
+      "education": "O'zMU Mexanika-matematika fakulteti",
+      "experience": "12 yil ish staji",
+      "score": "Respublika va xalqaro olimpiada sovrindorlari ustozi",
+      "badge": "Oliy Toifa",
+      "bio": "Chuqurlashtirilgan algebra, geometriya va xalqaro olimpiada kombinatorikasi bo'yicha mutaxassis.",
+      "image": ""
+    },
+    {
+      "id": "teach-2",
+      "name": "Sultonov Muhriddin Botirovich",
+      "role": "Informatika va Dasturlash o'qituvchisi",
+      "category": "Pedagoglar",
+      "department": "IT",
+      "toifa": "Senior Software Engineer • Bosh o'qituvchi",
+      "education": "TATU (Axborot xavfsizligi magistri)",
+      "experience": "9 yil dasturlash va pedagogik staj",
+      "score": "ICPC & Codeforces xalqaro musobaqalar treneri",
+      "badge": "Senior IT",
+      "bio": "Python, C++, algoritmlar, ma'lumotlar tuzilmasi va web dasturlash bo'yicha intensiv kurslar koordinatori.",
+      "image": ""
+    },
+    {
+      "id": "teach-3",
+      "name": "Usmonova Madinaxon Komiljonovna",
+      "role": "Ingliz tili va SAT ustozi",
+      "category": "Pedagoglar",
+      "department": "Ingliz tili",
+      "toifa": "IELTS 8.5 • TESOL Certified",
+      "education": "O'zDJTU (Ingliz filologiyasi)",
+      "experience": "8 yil xalqaro dasturlar tajribasi",
+      "score": "SAT Verbal 760+ murabbiyi",
+      "badge": "IELTS 8.5",
+      "bio": "SAT Reading & Writing, Academic English hamda xalqaro insho (Personal Statement) bo'yicha mentor.",
+      "image": ""
+    },
+    {
+      "id": "teach-4",
+      "name": "Rahmatov Izzatillo Xamidovich",
+      "role": "Fizika fani o'qituvchisi",
+      "category": "Pedagoglar",
+      "department": "Fizika",
+      "toifa": "Oliy toifali o'qituvchi",
+      "education": "FarDU Fizika-texnika fakulteti",
+      "experience": "15 yil pedagogik faoliyat",
+      "score": "Respublika fizika olimpiadasi hakamlar hay'ati a'zosi",
+      "badge": "Oliy Toifa",
+      "bio": "Amaliy fizika laboratoriyalari, elektrodinamika, optika va aerodinamika to'garaklari rahbari.",
+      "image": ""
+    }
+  ],
+  "slides": [
+    {
+      "id": "slide-2",
+      "title": "Zamonaviy IT ta'limi va Kelajak dasturchilari maskani",
+      "desc": "Web va mobil dasturlash, sun'iy intellekt, robototexnika laboratoriyalari va xalqaro olimpiadalarga maqsadli tayyorgarlik.",
+      "image": "/assets/uploads/upload-1794806334928-65.png",
+      "order": 2
+    },
+    {
+      "id": "slide-1795433663391",
+      "title": "MIT Tokyo",
+      "desc": "",
+      "image": "/assets/uploads/upload-1795433649309-88.png",
+      "order": 2
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal-1",
+      "src": "/assets/photos/school_photo_1.jpg",
+      "title": "Pedagogik attestatsiya va matematika mashg'ulotlari",
+      "category": "Darslar",
+      "date": "Noyabr 2026"
+    },
+    {
+      "id": "gal-2",
+      "src": "/assets/photos/school_photo_2.jpg",
+      "title": "Fizika fani o'qituvchisi Izzatillo Rahmatov va o'quvchilar",
+      "category": "Darslar",
+      "date": "Noyabr 2026"
+    },
+    {
+      "id": "gal-3",
+      "src": "/assets/photos/school_photo_3.jpg",
+      "title": "Robototexnika va sun'iy intellekt laboratoriya mashg'uloti",
+      "category": "Laboratoriya",
+      "date": "Noyabr 2026"
+    },
+    {
+      "id": "gal-4",
+      "src": "/assets/photos/school_photo_4.jpg",
+      "title": "Attestatsiya natijalari va ilmiy anjuman",
+      "category": "Tadbirlar",
+      "date": "Noyabr 2026"
+    },
+    {
+      "id": "gal-5",
+      "src": "/assets/photos/school_photo_5.jpg",
+      "title": "Vatanparvarlik va \"Ochiq eshiklar kuni\" harbiy qismda",
+      "category": "Tadbirlar",
+      "date": "Noyabr 2026"
+    },
+    {
+      "id": "gal-6",
+      "src": "/assets/photos/school_photo_6.jpg",
+      "title": "Kutubxona va adabiyot kechasi",
+      "category": "Maktab hayoti",
+      "date": "Noyabr 2026"
+    },
+    {
+      "id": "gal-7",
+      "src": "/assets/photos/school_photo_7.jpg",
+      "title": "\"Raqamli avlod qizlari\" startap loyihalari taqdimoti",
+      "category": "Laboratoriya",
+      "date": "Noyabr 2026"
+    },
+    {
+      "id": "gal-8",
+      "src": "/assets/photos/school_photo_8.jpg",
+      "title": "SAT MAXING CLUB taqdimoti va mashg'ulotlari",
+      "category": "Darslar",
+      "date": "Noyabr 2026"
+    },
+    {
+      "id": "gal-9",
+      "src": "/assets/photos/school_photo_9.jpg",
+      "title": "Hududiy ixtisoslashtirilgan ta'lim yutuqlari",
+      "category": "Maktab hayoti",
+      "date": "Noyabr 2026"
+    },
+    {
+      "id": "gal-10",
+      "src": "/assets/photos/school_photo_10.jpg",
+      "title": "“Bir Vatan, bir el, bir bayroq!” vatanparvarlik chellenji",
+      "category": "Tadbirlar",
+      "date": "Noyabr 2026"
+    },
+    {
+      "id": "gal-11",
+      "src": "/assets/school_building.jpg",
+      "title": "Maktab binosi va fasad ko'rinishi",
+      "category": "Maktab hayoti",
+      "date": "Noyabr 2026"
+    }
+  ],
+  "events": [],
+  "siteInfo": {
+    "schoolName": "Muhammad al-Xorazmiy nomidagi ixtisoslashtirilgan maktab",
+    "branchName": "Farg'ona filiali",
+    "aboutTitle": "Maktab haqida",
+    "aboutText": "Muhammad al-Xorazmiy nomidagi ixtisoslashtirilgan maktab Farg'ona filiali — zamonaviy texnologiyalar va chuqurlashtirilgan ta'lim uyg'unligiga asoslangan innovatsion davlat ta'lim maskani. Maktabda matematika, fizika, informatika hamda ingliz tili fanlari chuqurlashtirilgan holda oʻtiladi.",
+    "aboutImage": "",
+    "address": "Farg'ona shahar, Ilg'or MFY, Mustaqillik shoh ko'chasi 1e-uy",
+    "phone": "+998 (73) 244-01-20",
+    "email": "info@alxorazmiy-fergana.uz",
+    "telegramChannel": "@alXorazmiyfargonafiliali"
+  },
+  "clubs": [
+    {
+      "id": "club-presidency",
+      "title": "IT-School Presidency",
+      "category": "Ijtimoiy",
+      "founder": "Muhammadjonov Abdulla",
+      "leader": "Abdumanabov Sardorbek",
+      "desc": "Maktab o'quvchilarining o'zini o'zi boshqarish tizimi, yoshlar prezidentligi, vazirliklar faoliyatini muvofiqlashtirish va umumta'lim tashabbuslari.",
+      "image": "/assets/logo.jpg",
+      "isEmblem": true,
+      "badge": "Prezidentlik",
+      "color": "from-blue-700 to-indigo-800",
+      "telegram": "https://t.me/alXorazmiyfargonafiliali"
+    },
+    {
+      "id": "club-volunteers",
+      "title": "Al-Khwarizmi Volunteers",
+      "category": "Ijtimoiy",
+      "founder": "Abdumanabov Sardorbek",
+      "leader": "Sayfutdinova Sevinch",
+      "desc": "Ijtimoiy yordam, xayriya tadbirlari, ixtiyoriy ko'ngillilar harakati hamda maktab miqyosidagi yirik tadbirlarni tashkillashtirish.",
+      "image": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&q=80",
+      "badge": "Volontyorlik",
+      "color": "from-sky-500 to-blue-600",
+      "telegram": "https://t.me/alXorazmiyfargonafiliali"
+    },
+    {
+      "id": "club-zakovat",
+      "title": "Zakovat klubi",
+      "category": "Sport",
+      "founder": "Doniyor Kamoliddinov",
+      "leader": "Komilov Anasxon",
+      "desc": "Mantiqiy intellektual o'yinlar, 'Zakovat' intellektual ringi, breyn-ring va olimpiada savollari bo'yicha doimiy bellashuvlar klubi.",
+      "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&q=80",
+      "badge": "Intellektual",
+      "color": "from-amber-500 to-orange-600",
+      "telegram": "https://t.me/alXorazmiyfargonafiliali"
+    },
+    {
+      "id": "club-sat",
+      "title": "SAT MAXING CLUB",
+      "category": "Ijtimoiy",
+      "founder": "Chet tillari kafedrasi",
+      "leader": "Olimov Sardorbek",
+      "desc": "Top jahon universitetlariga (MIT, Harvard, KAIST) 1500+ SAT balli bilan to'liq grant yutishni maqsad qilgan iqtidorli yoshlar jamiyati.",
+      "badge": "Xalqaro Grant",
+      "color": "from-blue-600 to-sky-500",
+      "telegram": "https://t.me/alXorazmiyfargonafiliali"
+    },
+    {
+      "id": "club-girls",
+      "title": "Raqamli Avlod Qizlari",
+      "category": "Ekologiya",
+      "founder": "Innovatsiyalar bo'limi",
+      "leader": "Nozimova Shukrona",
+      "desc": "Maktabimiz o'quvchi qizlarining yashil iqtisodiyot, ekologik monitoring va EdTech startap loyihalarini hayotga tatbiq etish markazi.",
+      "badge": "Startap & Ekologiya",
+      "color": "from-pink-500 to-purple-600",
+      "telegram": "https://t.me/alXorazmiyfargonafiliali"
+    },
+    {
+      "id": "club-robotics",
+      "title": "Robototexnika & AI Hub",
+      "category": "Sport",
+      "founder": "IT Kafedrasi",
+      "leader": "Tolibjonov Qudratjon",
+      "desc": "Xalqaro WRO (World Robot Olympiad) musobaqalari, avtonom tizimlar, dronlar dasturlash va sun'iy intellekt laboratoriyasi.",
+      "badge": "Muhandislik",
+      "color": "from-emerald-600 to-teal-500",
+      "telegram": "https://t.me/alXorazmiyfargonafiliali"
+    }
+  ],
+  "scrollNews": []
+}
