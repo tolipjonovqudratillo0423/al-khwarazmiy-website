@@ -37,8 +37,8 @@ function ScrollToTop() {
 
 export default function App() {
   const location = useLocation();
-  const isAdminDashboard = location.pathname.startsWith('/admin') && location.pathname !== '/admin-login';
-  const isAdminLogin = location.pathname === '/admin-login';
+  const isAdminDashboard = location.pathname.startsWith('/al-xorazmiy-fer') && location.pathname !== '/admin-login';
+  const isAdminLogin = location.pathname === '/admin-al-xorazmiy-fer-login';
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-50 font-poppins selection:bg-brand-blue selection:text-white">
