@@ -252,6 +252,45 @@ app.put('/api/site-info', authMiddleware, (req, res) => {
   res.json({ success: true, message: 'Ma\'lumotlar muvaffaqiyatli yangilandi!', data: updated });
 });
 
+// Partners API
+app.get('/api/partners', (req, res) => {
+  const partners = db.getPartners();
+  res.json({ success: true, count: partners.length, data: partners });
+});
+
+app.post('/api/partners', authMiddleware, (req, res) => {
+  const name = typeof req.body.name === 'string' ? req.body.name.trim() : '';
+  const logo = typeof req.body.logo === 'string' ? req.body.logo.trim() : '';
+  if (!name || !logo) {
+    return res.status(400).json({ success: false, message: 'Hamkor nomi va logotipi talab etiladi!' });
+  }
+  const tag = typeof req.body.tag === 'string' ? req.body.tag.trim() : '';
+  const created = db.addPartner({ name, logo, tag });
+  res.status(201).json({ success: true, message: 'Hamkor qo\'shildi!', data: created });
+});
+
+app.put('/api/partners/:id', authMiddleware, (req, res) => {
+  const name = typeof req.body.name === 'string' ? req.body.name.trim() : '';
+  const logo = typeof req.body.logo === 'string' ? req.body.logo.trim() : '';
+  if (!name || !logo) {
+    return res.status(400).json({ success: false, message: 'Hamkor nomi va logotipi talab etiladi!' });
+  }
+  const tag = typeof req.body.tag === 'string' ? req.body.tag.trim() : '';
+  const updated = db.updatePartner(req.params.id, { name, logo, tag });
+  if (!updated) {
+    return res.status(404).json({ success: false, message: 'Hamkor topilmadi!' });
+  }
+  res.json({ success: true, message: 'Hamkor yangilandi!', data: updated });
+});
+
+app.delete('/api/partners/:id', authMiddleware, (req, res) => {
+  const deleted = db.deletePartner(req.params.id);
+  if (!deleted) {
+    return res.status(404).json({ success: false, message: 'Hamkor topilmadi!' });
+  }
+  res.json({ success: true, message: 'Hamkor o\'chirildi!' });
+});
+
 // 8. News & Gazette API
 app.get('/api/news', (req, res) => {
   let news = db.getNews();

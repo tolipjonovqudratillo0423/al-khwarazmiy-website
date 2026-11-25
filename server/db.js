@@ -34,6 +34,18 @@ const getInitialData = () => {
       olympiadWinners: '68+',
       grantsWon: '15+'
     },
+    partners: [
+      { id: 'partner-ministry', name: "Maktabgacha va maktab ta'limi vazirligi", tag: 'Vazirlik', logo: '/assets/talim.png' },
+      { id: 'partner-agency', name: "Ixtisoslashtirilgan ta'lim muassasalari agentligi", tag: 'Agentlik', logo: '/assets/agentlik.png' },
+      { id: 'partner-digital', name: 'Raqamli texnologiyalar vazirligi', tag: 'Vazirlik', logo: '/assets/digitaluz.png' },
+      { id: 'partner-itpark', name: 'IT Park Uzbekistan', tag: 'IT ekosistema', logo: '/assets/itpark.png' },
+      { id: 'partner-tatu', name: "TATU Farg'ona filiali", tag: "Oliy ta'lim", logo: '' },
+      { id: 'partner-fstu', name: "Farg'ona davlat texnika universiteti", tag: "Oliy ta'lim", logo: '/assets/fstu.png' },
+      { id: 'partner-guard', name: "Milliy Gvardiya Farg'ona viloyati", tag: 'Hamkorlik', logo: '/assets/gvardiya.jpg' },
+      { id: 'partner-youth', name: 'Yoshlar Ittifoqi', tag: 'Jamoat tashkiloti', logo: '' },
+      { id: 'partner-university', name: 'Muhammad al-Xorazmiy Universiteti', tag: "Oliy ta'lim", logo: '/assets/aluniversity.png' },
+      { id: 'partner-hokimlik', name: "Farg'ona Viloyat Hokimligi", tag: 'Davlat boshqaruvi', logo: '/assets/hokimlik.png' }
+    ],
     slides: [
       {
         id: 'slide-1',
@@ -186,7 +198,7 @@ class DB {
         // Ensure new collections exist if older DB was created
         const defaults = getInitialData();
         let updated = false;
-        ['teachers', 'slides', 'gallery', 'events', 'siteInfo', 'clubs'].forEach(k => {
+        ['teachers', 'slides', 'gallery', 'events', 'siteInfo', 'clubs', 'partners'].forEach(k => {
           if (!this.data[k]) {
             this.data[k] = defaults[k];
             updated = true;
@@ -587,6 +599,40 @@ class DB {
     const before = (this.data.scrollNews || []).length;
     this.data.scrollNews = (this.data.scrollNews || []).filter(s => s.id !== id);
     const changed = this.data.scrollNews.length < before;
+    if (changed) this.save();
+    return changed;
+  }
+
+  getPartners() {
+    return this.data.partners || [];
+  }
+
+  addPartner(item) {
+    const list = this.data.partners || [];
+    const newPartner = {
+      id: `partner-${Date.now()}`,
+      name: item.name,
+      tag: item.tag || 'Hamkor',
+      logo: item.logo
+    };
+    list.push(newPartner);
+    this.data.partners = list;
+    this.save();
+    return newPartner;
+  }
+
+  updatePartner(id, updateData) {
+    const index = (this.data.partners || []).findIndex(partner => partner.id === id);
+    if (index === -1) return null;
+    this.data.partners[index] = { ...this.data.partners[index], ...updateData, id };
+    this.save();
+    return this.data.partners[index];
+  }
+
+  deletePartner(id) {
+    const before = (this.data.partners || []).length;
+    this.data.partners = (this.data.partners || []).filter(partner => partner.id !== id);
+    const changed = this.data.partners.length < before;
     if (changed) this.save();
     return changed;
   }

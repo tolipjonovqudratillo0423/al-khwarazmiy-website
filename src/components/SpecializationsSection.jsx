@@ -13,7 +13,7 @@ export default function SpecializationsSection() {
       title: "Web dasturlash",
       category: "Frontend & Backend",
       desc: "Zamonaviy veb-saytlar va murakkab axborot tizimlarini ishlab chiqish. HTML5, CSS3, JavaScript, React.js, Node.js va Python dasturlash texnologiyalari.",
-      image: "/assets/school_building.jpg",
+      image: "/assets/web.png",
       link: "/web",
       color: "text-blue-600"
     },
@@ -21,7 +21,7 @@ export default function SpecializationsSection() {
       title: "Mobil dasturlash",
       category: "iOS & Android",
       desc: "Smartfonlar uchun qulay va tezkor mobil ilovalar yaratish. Google Flutter, Dart va Kotlin asosida zamonaviy arxitekturadagi loyihalar.",
-      image: "/assets/school_building.jpg",
+      image: "/assets/androidios.png",
       link: "/mobil",
       color: "text-purple-600"
     },
@@ -29,7 +29,7 @@ export default function SpecializationsSection() {
       title: "Kompyuter grafikasi",
       category: "UI/UX & 3D Design",
       desc: "Raqamli dizayn, foydalanuvchi tajribasi (UI/UX), 3D vizualizatsiya va animatsiyalar. Figma, Adobe Photoshop va Blender muhitida ishlash.",
-      image: "/assets/school_building.jpg",
+      image: "/assets/uxui.png",
       link: "/grafika",
       color: "text-pink-600"
     },
@@ -37,7 +37,7 @@ export default function SpecializationsSection() {
       title: "Kompyuter tarmoqlari",
       category: "Cisco & Kiberxavfsizlik",
       desc: "Lokal va global tarmoqlarni loyihalash, marshrutizatsiya, Cisco uskunalarini boshqarish hamda axborot xavfsizligi asoslari.",
-      image: "/assets/school_building.jpg",
+      image: "/assets/cyber.png",
       link: "/tarmoq",
       color: "text-emerald-600"
     }

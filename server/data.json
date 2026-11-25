@@ -14,28 +14,62 @@
   },
   "gazettes": [
     {
-      "id": "gazette-1795433862899",
-      "title": "Al-Xorazmiy Ziyo Gazetasi",
+      "id": "gazette-1795631408111",
+      "title": "Al-Xorazmiy ",
       "subtitle": "Maktab gazetasining maxsus nashri",
-      "date": "2026-11-23",
+      "date": "2026-11-25",
       "edition": "2026-yil",
       "coverImage": "/assets/photos/school_photo_7.jpg",
-      "description": "adminXorazmiy2026!adminXorazmiy2026!adminXorazmiy2026!adminXorazmiy2026!adminXorazmiy2026!adminXorazmiy2026!",
+      "description": "Muhammad Al-Xorazmiy maktabi Farg'ona filiali gazetasi",
       "articlesCount": 6,
       "downloadUrl": "#"
     }
   ],
   "news": [
     {
+      "id": "news-1795631972105",
+      "slug": "muhammad-al-xorazmiy-nomidagi-ixtisoslatirilgan-maktabining-",
+      "title": "Muhammad al-Xorazmiy nomidagi ixtisoslaştirilgan maktabining Farğona filialida öquv seminari ötkazildi.",
+      "category": "Yangiliklar",
+      "date": "2026-11-25",
+      "author": "Matbuot xizmati",
+      "coverImage": "/assets/uploads/upload-1795631920681-175.png",
+      "excerpt": "\n🔴Farğona 24 \n24.11.2026",
+      "content": "Muhammad al-Xorazmiy nomidagi ixtisoslaştirilgan maktabining Farğona filialida öquv seminari ötkazildi.",
+      "tags": [
+        "Yangiliklar",
+        "Maktab"
+      ],
+      "views": 1,
+      "featured": false
+    },
+    {
+      "id": "news-1795631721558",
+      "slug": "mehnatning-munosib-natijasi",
+      "title": "MEHNATNING MUNOSIB NATIJASI!",
+      "category": "Ta'lim va Metodika",
+      "date": "2026-11-25",
+      "author": "Matbuot xizmati",
+      "coverImage": "/assets/uploads/upload-1795631779829-991.jpg",
+      "excerpt": "\n☄️Quvonçli xabarimiz şuki, Islomjon ustoz attestatsiya sinovlarida 82 ball töplab, özining kasbiy bilim va salohiyatini yana bir bor namoyon etdi!\n",
+      "content": "\n🌐Bir vaqtning özida ishlash, öqish va kasbiy rivojlanish oson emas. Buning uçun vaqtni qadrlash, maqsad sari intiliş va öz ustida muntazam işlaş talab etiladi. Bugungi qahramonimiz sanʼat fani oʻqituvchimiz Karimov Islomjon ana şunday izlanişdan töxtamaydigan ustozlardan biri.",
+      "tags": [
+        "Yangiliklar",
+        "Maktab"
+      ],
+      "views": 1,
+      "featured": false
+    },
+    {
       "id": "news-1795433777291",
       "slug": "23456789",
-      "title": "23456789",
-      "category": "Ta'lim va Metodika",
+      "title": "Prezident Şavkat Mirziyoyevning nabirasi timsolida barça Özbekiston farzandlariga yöllagan maktubidan eng muhim",
+      "category": "Yangiliklar",
       "date": "2026-11-23",
       "author": "Matbuot xizmati",
-      "coverImage": "/assets/uploads/upload-1795433766039-914.png",
-      "excerpt": "wertyui",
-      "content": "ertyuio",
+      "coverImage": "/assets/uploads/upload-1795631541508-988.jpg",
+      "excerpt": "🔵Taqdir zimmamga şunday vazifa yuklaganki, men nafaqat sening, balki senga öxşagan millionlab Özbekiston farzandlarining kelajagi haqida ham öylaşim, qayğurişim kerak.",
+      "content": "🔵Taqdir zimmamga şunday vazifa yuklaganki, men nafaqat sening, balki senga öxşagan millionlab Özbekiston farzandlarining kelajagi haqida ham öylaşim, qayğurişim kerak.\n\n🔵Men qaysi lavozimda faoliyat yuritmay – deputatmi, hokimmi, boş vazirmi yoki davlat rahbarimi, hamişa xalq oğirini yengil qiliş, muşkulini oson etişni asosiy maqsad, öz hayotimning ma’no-mazmuni deb bilganman.\n\n🔵Umrimni el-u yurt xizmatiga baxş etişdan bir lahza bölsin afsuslanmadim. Hayotda çiqargan eng katta xulosalarimdan biri şuki, bu dunyoda millatning dardiga darmon bölişdan köra a’lo va afzal iş yöq.\n\n🔵Unutma, sizlar öz aql-zakovati bilan dunyoni özgartirgan, insoniyatga ustozlik qilgan ne-ne buyuk zotlarning avlodisiz.\n\n🔵Yurtimizdagi millionlab öğil-qizlarimizning qalbida ham daholar, ularning ölmas ruhi yaşayotganiga imonim komil. Faqatgina bu farzandlarimizning iqtidorini vaqtida uyğotib, parvarişlay olsak bas.\n\n🔵Bilginki, olimlar, ixtiroçilar, çempionlar öz-özidan paydo bölmaydi. Boğbon özi ekkan nihol ösib, mevaga kirguniga qadar neça yil ter tökib mehnat qiladi. Zukko, bilimli, hunarli yoşlarni voyaga yetkaziş ham ana şunday maşaqqatli iş, mas’uliyatli yumuşdir.",
       "tags": [
         "Yangiliklar",
         "Maktab"
@@ -158,13 +192,6 @@
       "desc": "Web va mobil dasturlash, sun'iy intellekt, robototexnika laboratoriyalari va xalqaro olimpiadalarga maqsadli tayyorgarlik.",
       "image": "/assets/uploads/upload-1794806334928-65.png",
       "order": 2
-    },
-    {
-      "id": "slide-1795433663391",
-      "title": "MIT Tokyo",
-      "desc": "",
-      "image": "/assets/uploads/upload-1795433649309-88.png",
-      "order": 2
     }
   ],
   "gallery": [
@@ -252,11 +279,14 @@
     "branchName": "Farg'ona filiali",
     "aboutTitle": "Maktab haqida",
     "aboutText": "Muhammad al-Xorazmiy nomidagi ixtisoslashtirilgan maktab Farg'ona filiali — zamonaviy texnologiyalar va chuqurlashtirilgan ta'lim uyg'unligiga asoslangan innovatsion davlat ta'lim maskani. Maktabda matematika, fizika, informatika hamda ingliz tili fanlari chuqurlashtirilgan holda oʻtiladi.",
-    "aboutImage": "",
+    "aboutImage": "/assets/uploads/upload-1795632096349-657.jpg",
     "address": "Farg'ona shahar, Ilg'or MFY, Mustaqillik shoh ko'chasi 1e-uy",
     "phone": "+998 (73) 244-01-20",
     "email": "info@alxorazmiy-fergana.uz",
-    "telegramChannel": "@alXorazmiyfargonafiliali"
+    "telegramChannel": "@alXorazmiyfargonafiliali",
+    "aboutText1": "Muhammad al-Xorazmiy nomidagi ixtisoslashtirilgan maktab Farg'ona filiali — zamonaviy texnologiyalar va chuqurlashtirilgan ta'lim uyg'unligiga asoslangan innovatsion davlat ta'lim maskani.",
+    "aboutText2": "Maktabda matematika, fizika, informatika hamda ingliz tili fanlari chuqurlashtirilgan holda oʻqitiladi. Shuningdek, o'quvchilar xalqaro SAT, WRO robototexnika va fan olimpiadalariga professional ustozlar tomonidan tayyorlanadi.",
+    "telegram": "Maktabda matematika, fizika, informatika hamda ingliz tili fanlari chuqurlashtirilgan holda oʻqitiladi. Shuningdek, o'quvchilar xalqaro SAT, WRO robototexnika va fan olimpiadalariga professional ustozlar tomonidan tayyorlanadi."
   },
   "clubs": [
     {
@@ -305,7 +335,10 @@
       "desc": "Top jahon universitetlariga (MIT, Harvard, KAIST) 1500+ SAT balli bilan to'liq grant yutishni maqsad qilgan iqtidorli yoshlar jamiyati.",
       "badge": "Xalqaro Grant",
       "color": "from-blue-600 to-sky-500",
-      "telegram": "https://t.me/alXorazmiyfargonafiliali"
+      "telegram": "https://t.me/alXorazmiyfargonafiliali",
+      "image": "assets/sat.jpg",
+      "stats": "",
+      "features": ""
     },
     {
       "id": "club-girls",
@@ -330,5 +363,67 @@
       "telegram": "https://t.me/alXorazmiyfargonafiliali"
     }
   ],
-  "scrollNews": []
+  "scrollNews": [],
+  "partners": [
+    {
+      "id": "partner-ministry",
+      "name": "Maktabgacha va maktab ta'limi vazirligi",
+      "tag": "Vazirlik",
+      "logo": "/assets/talim.png"
+    },
+    {
+      "id": "partner-agency",
+      "name": "Ixtisoslashtirilgan ta'lim muassasalari agentligi",
+      "tag": "Agentlik",
+      "logo": "/assets/agentlik.png"
+    },
+    {
+      "id": "partner-digital",
+      "name": "Raqamli texnologiyalar vazirligi",
+      "tag": "Vazirlik",
+      "logo": "/assets/digitaluz.png"
+    },
+    {
+      "id": "partner-itpark",
+      "name": "IT Park Uzbekistan",
+      "tag": "IT ekosistema",
+      "logo": "/assets/itpark.png"
+    },
+    {
+      "id": "partner-tatu",
+      "name": "TATU Farg'ona filiali",
+      "tag": "Oliy ta'lim",
+      "logo": ""
+    },
+    {
+      "id": "partner-fstu",
+      "name": "Farg'ona davlat texnika universiteti",
+      "tag": "Oliy ta'lim",
+      "logo": "/assets/fstu.png"
+    },
+    {
+      "id": "partner-guard",
+      "name": "Milliy Gvardiya Farg'ona viloyati",
+      "tag": "Hamkorlik",
+      "logo": "/assets/gvardiya.jpg"
+    },
+    {
+      "id": "partner-youth",
+      "name": "Yoshlar Ittifoqi",
+      "tag": "Jamoat tashkiloti",
+      "logo": ""
+    },
+    {
+      "id": "partner-university",
+      "name": "Muhammad al-Xorazmiy Universiteti",
+      "tag": "Oliy ta'lim",
+      "logo": "/assets/aluniversity.png"
+    },
+    {
+      "id": "partner-hokimlik",
+      "name": "Farg'ona Viloyat Hokimligi",
+      "tag": "Davlat boshqaruvi",
+      "logo": "/assets/hokimlik.png"
+    }
+  ]
 }

@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import {
   Newspaper, Plus, Edit2, Trash2, BookOpen, Mail, BarChart3, Lock,
   LogOut, ExternalLink, CheckCircle2, AlertCircle, Eye, Search, X, Image as ImageIcon,
-  Users, Presentation, Calendar, Settings, Upload, Check, User, Target, Sparkles, Radio, Send
+  Users, Presentation, Calendar, Settings, Upload, Check, User, Target, Sparkles, Radio, Send, Building2
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
@@ -18,6 +18,7 @@ export default function AdminDashboardPage() {
   const [teachers, setTeachers] = useState([]);
   const [clubs, setClubs] = useState([]);
   const [slides, setSlides] = useState([]);
+  const [partners, setPartners] = useState([]);
   const [scrollNews, setScrollNews] = useState([]);
   const [gallery, setGallery] = useState([]);
   const [events, setEvents] = useState([]);
@@ -86,6 +87,10 @@ export default function AdminDashboardPage() {
     image: '/assets/school_building.jpg',
     order: 1
   });
+
+  const [partnerModalOpen, setPartnerModalOpen] = useState(false);
+  const [editingPartnerId, setEditingPartnerId] = useState(null);
+  const [partnerForm, setPartnerForm] = useState({ name: '', tag: '', logo: '' });
 
   const [galleryModalOpen, setGalleryModalOpen] = useState(false);
   const [galleryForm, setGalleryForm] = useState({
@@ -179,6 +184,11 @@ export default function AdminDashboardPage() {
       const resS = await fetch('/api/slides');
       const dataS = await resS.json();
       if (dataS.success) setSlides(dataS.data);
+
+      // Partners
+      const resP = await fetch('/api/partners');
+      const dataP = await resP.json();
+      if (dataP.success) setPartners(dataP.data);
 
       // Gallery
       const resG = await fetch('/api/gallery');
@@ -547,6 +557,68 @@ export default function AdminDashboardPage() {
       if (data.success) {
         showNotify("Slayd o'chirildi");
         loadAllData();
+      }
+    } catch (err) {
+      alert('Xatolik yuz berdi');
+    }
+  };
+
+  // PARTNERS ACTIONS
+  const handleOpenAddPartner = () => {
+    setEditingPartnerId(null);
+    setPartnerForm({ name: '', tag: '', logo: '' });
+    setPartnerModalOpen(true);
+  };
+
+  const handleOpenEditPartner = (partner) => {
+    setEditingPartnerId(partner.id);
+    setPartnerForm({
+      name: partner.name || '',
+      tag: partner.tag || '',
+      logo: partner.logo || ''
+    });
+    setPartnerModalOpen(true);
+  };
+
+  const handleSavePartner = async (e) => {
+    e.preventDefault();
+    try {
+      const url = editingPartnerId ? `/api/partners/${editingPartnerId}` : '/api/partners';
+      const method = editingPartnerId ? 'PUT' : 'POST';
+      const res = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(partnerForm)
+      });
+      const data = await res.json();
+      if (data.success) {
+        showNotify(editingPartnerId ? 'Hamkor yangilandi!' : "Yangi hamkor qo'shildi!");
+        setPartnerModalOpen(false);
+        loadAllData();
+      } else {
+        alert(data.message || 'Xatolik yuz berdi');
+      }
+    } catch (err) {
+      alert("Server bilan bog'lanishda xatolik");
+    }
+  };
+
+  const handleDeletePartner = async (partner) => {
+    if (!window.confirm(`"${partner.name}" hamkorini o'chirmoqchimisiz?`)) return;
+    try {
+      const res = await fetch(`/api/partners/${partner.id}`, {
+        method: 'DELETE',
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      const data = await res.json();
+      if (data.success) {
+        showNotify("Hamkor o'chirildi!");
+        loadAllData();
+      } else {
+        alert(data.message || "Hamkorni o'chirib bo'lmadi");
       }
     } catch (err) {
       alert('Xatolik yuz berdi');
@@ -960,6 +1032,18 @@ export default function AdminDashboardPage() {
           </button>
 
           <button
+            onClick={() => setActiveTab('partners')}
+            className={`flex-shrink-0 flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-bold transition cursor-pointer ${
+              activeTab === 'partners'
+                ? 'bg-brand-navy text-white shadow'
+                : 'text-slate-600 hover:bg-slate-100'
+            }`}
+          >
+            <Building2 className="w-4 h-4 text-sky-400" />
+            <span>Hamkorlar ({partners.length})</span>
+          </button>
+
+          <button
             onClick={() => setActiveTab('siteInfo')}
             className={`flex-shrink-0 flex items-center space-x-2 px-4 py-2.5 rounded-xl text-xs font-bold transition cursor-pointer ${
               activeTab === 'siteInfo'
@@ -1322,6 +1406,73 @@ export default function AdminDashboardPage() {
                 </div>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* TAB: PARTNERS */}
+        {activeTab === 'partners' && (
+          <div className="space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+              <div>
+                <h2 className="text-lg font-bold text-slate-900">Hamkor tashkilotlar</h2>
+                <p className="text-xs text-slate-500 mt-1">
+                  Saytdagi hamkorlar ro'yxati va ularning logotiplarini boshqaring.
+                </p>
+              </div>
+              <button
+                onClick={handleOpenAddPartner}
+                className="bg-brand-blue hover:bg-blue-600 text-white px-5 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center space-x-2 shadow-sm transition cursor-pointer"
+              >
+                <Plus className="w-4 h-4" />
+                <span>Hamkor qo'shish</span>
+              </button>
+            </div>
+
+            {partners.length === 0 ? (
+              <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center">
+                <Building2 className="w-12 h-12 text-slate-300 mx-auto mb-3" />
+                <h3 className="text-sm font-bold text-slate-700">Hamkorlar ro'yxati bo'sh</h3>
+                <p className="text-xs text-slate-500 mt-1">Birinchi hamkor va uning logotipini qo'shing.</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                {partners.map((partner) => (
+                  <div key={partner.id} className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 flex items-center gap-4">
+                    <div className="w-20 h-16 flex-shrink-0 flex items-center justify-center rounded-xl border border-slate-100 bg-white p-2">
+                      {partner.logo ? (
+                        <img
+                          src={partner.logo}
+                          alt={`${partner.name} logotipi`}
+                          className="max-w-full max-h-full object-contain"
+                        />
+                      ) : (
+                        <Building2 className="w-7 h-7 text-slate-300" />
+                      )}
+                    </div>
+                    <div className="min-w-0 flex-grow">
+                      <p className="text-sm font-bold text-slate-800 leading-snug">{partner.name}</p>
+                      <p className="text-xs text-slate-500 mt-1">{partner.tag || 'Hamkor'}</p>
+                      <div className="flex items-center gap-3 mt-2">
+                        <button
+                          onClick={() => handleOpenEditPartner(partner)}
+                          className="text-xs font-semibold text-brand-blue hover:text-blue-800 flex items-center gap-1 cursor-pointer"
+                        >
+                          <Edit2 className="w-3.5 h-3.5" />
+                          Tahrirlash
+                        </button>
+                        <button
+                          onClick={() => handleDeletePartner(partner)}
+                          className="text-xs font-semibold text-rose-600 hover:text-rose-800 flex items-center gap-1 cursor-pointer"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                          O'chirish
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
 
@@ -2244,6 +2395,115 @@ export default function AdminDashboardPage() {
                 <button
                   type="submit"
                   className="bg-brand-blue hover:bg-blue-600 text-white font-bold px-6 py-2.5 rounded-xl text-xs shadow-md transition cursor-pointer"
+                >
+                  Saqlash
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* PARTNER MODAL */}
+      {partnerModalOpen && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative my-8">
+            <button
+              type="button"
+              onClick={() => setPartnerModalOpen(false)}
+              className="absolute top-5 right-5 text-slate-400 hover:text-slate-600"
+              aria-label="Yopish"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <h3 className="text-xl font-bold text-slate-900 mb-5">
+              {editingPartnerId ? 'Hamkorni tahrirlash' : "Yangi hamkor qo'shish"}
+            </h3>
+
+            <form onSubmit={handleSavePartner} className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">Tashkilot nomi *</label>
+                <input
+                  type="text"
+                  required
+                  value={partnerForm.name}
+                  onChange={(e) => setPartnerForm({ ...partnerForm, name: e.target.value })}
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-brand-blue outline-none"
+                  placeholder="Tashkilot nomi"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">Toifa</label>
+                <input
+                  type="text"
+                  value={partnerForm.tag}
+                  onChange={(e) => setPartnerForm({ ...partnerForm, tag: e.target.value })}
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-brand-blue outline-none"
+                  placeholder="Masalan: Oliy ta'lim"
+                />
+              </div>
+
+              <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
+                <label className="block text-xs font-bold text-slate-700">Logotip *</label>
+                <div className="flex items-center gap-4">
+                  <div className="w-24 h-20 flex-shrink-0 flex items-center justify-center rounded-xl border border-slate-200 bg-white p-2">
+                    {partnerForm.logo ? (
+                      <img
+                        src={partnerForm.logo}
+                        alt="Logotip ko'rinishi"
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    ) : (
+                      <Building2 className="w-8 h-8 text-slate-300" />
+                    )}
+                  </div>
+                  <div className="flex-grow space-y-2">
+                    <input
+                      type="text"
+                      required
+                      value={partnerForm.logo}
+                      onChange={(e) => setPartnerForm({ ...partnerForm, logo: e.target.value })}
+                      className="w-full px-4 py-2 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-brand-blue outline-none bg-white"
+                      placeholder="/assets/logo.png yoki URL"
+                    />
+                    <label className={`inline-flex items-center gap-2 px-4 py-2 bg-brand-light text-brand-blue text-xs font-bold rounded-xl transition ${uploading ? 'opacity-60 cursor-wait' : 'hover:bg-blue-100 cursor-pointer'}`}>
+                      <Upload className="w-3.5 h-3.5" />
+                      <span>{uploading ? 'Yuklanmoqda...' : 'Kompyuterdan yuklash'}</span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        disabled={uploading}
+                        className="hidden"
+                        onChange={(e) => {
+                          const file = e.target.files?.[0];
+                          handleFileUpload(file, (url) => {
+                            setPartnerForm((current) => ({ ...current, logo: url }));
+                          });
+                          e.target.value = '';
+                        }}
+                      />
+                    </label>
+                  </div>
+                </div>
+                <p className="text-[11px] text-slate-500">
+                  Fayl yuklang yoki ommaviy rasm yo'lini kiriting. Logotiplar saytda buzilmasdan, o'z nisbatida ko'rsatiladi.
+                </p>
+              </div>
+
+              <div className="flex justify-end gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setPartnerModalOpen(false)}
+                  className="px-5 py-2.5 rounded-xl border border-slate-200 text-xs font-semibold text-slate-600 hover:bg-slate-50 cursor-pointer"
+                >
+                  Bekor qilish
+                </button>
+                <button
+                  type="submit"
+                  disabled={uploading}
+                  className="bg-brand-blue hover:bg-blue-600 disabled:opacity-60 text-white font-bold px-6 py-2.5 rounded-xl text-xs shadow-md transition cursor-pointer"
                 >
                   Saqlash
                 </button>
