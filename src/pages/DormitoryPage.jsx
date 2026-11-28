@@ -63,7 +63,7 @@ export default function DormitoryPage() {
               <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center shadow-sm">
                 <Utensils className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-brand-navy">3 Mahal Issiq Ovqat</h3>
+              <h3 className="text-lg font-bold text-brand-navy">5 Mahal Ovqat</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 To'liq bepul, o'quvchi yoshlar ratsioni va tibbiy me'yorlar asosida tayyorlanadigan vitaminlarga boy issiq taomlar.
               </p>

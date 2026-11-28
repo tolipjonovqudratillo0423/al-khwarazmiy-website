@@ -304,15 +304,17 @@
     },
     {
       "id": "club-volunteers",
-      "title": "Al-Khwarizmi Volunteers",
-      "category": "Ijtimoiy",
-      "founder": "Abdumanabov Sardorbek",
-      "leader": "Sayfutdinova Sevinch",
-      "desc": "Ijtimoiy yordam, xayriya tadbirlari, ixtiyoriy ko'ngillilar harakati hamda maktab miqyosidagi yirik tadbirlarni tashkillashtirish.",
-      "image": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&q=80",
-      "badge": "Volontyorlik",
+      "title": "Future Engineers",
+      "category": "Fan / IT",
+      "founder": "Tolibjonov Qudratjon",
+      "leader": "Tolibjonov Qudratjon",
+      "desc": "Raqamli avlodning yangi ixtirolari va StartUp loyihalarini rivojlantirish. Yetakchi Engineers yetishtirish.",
+      "image": "/assets/future-engineers.png",
+      "badge": "Raqamli Avlod",
       "color": "from-sky-500 to-blue-600",
-      "telegram": "https://t.me/alXorazmiyfargonafiliali"
+      "telegram": "https://t.me/Future_Engineers_Fergana",
+      "stats": "",
+      "features": ""
     },
     {
       "id": "club-zakovat",
@@ -321,10 +323,12 @@
       "founder": "Doniyor Kamoliddinov",
       "leader": "Komilov Anasxon",
       "desc": "Mantiqiy intellektual o'yinlar, 'Zakovat' intellektual ringi, breyn-ring va olimpiada savollari bo'yicha doimiy bellashuvlar klubi.",
-      "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&q=80",
+      "image": "/assets/zakovat.png",
       "badge": "Intellektual",
       "color": "from-amber-500 to-orange-600",
-      "telegram": "https://t.me/alXorazmiyfargonafiliali"
+      "telegram": "https://t.me/alXorazmiyfargonafiliali",
+      "stats": "",
+      "features": ""
     },
     {
       "id": "club-sat",
@@ -342,25 +346,31 @@
     },
     {
       "id": "club-girls",
-      "title": "Raqamli Avlod Qizlari",
+      "title": "Eco Sphere ",
       "category": "Ekologiya",
       "founder": "Innovatsiyalar bo'limi",
       "leader": "Nozimova Shukrona",
-      "desc": "Maktabimiz o'quvchi qizlarining yashil iqtisodiyot, ekologik monitoring va EdTech startap loyihalarini hayotga tatbiq etish markazi.",
-      "badge": "Startap & Ekologiya",
+      "desc": " Muhammad al-Xorazmiy nomidagi ixtisoslashtirilgan maktabi Fargʻona filiali eko faollari tomonidan ochilgan boʻlib, maktab hayotiga oid ekologik yangiliklar, faoliyatlar va ma'lumotlar yoritilib boriladi",
+      "badge": "Ekologiya",
       "color": "from-pink-500 to-purple-600",
-      "telegram": "https://t.me/alXorazmiyfargonafiliali"
+      "telegram": "https://t.me/eco_khwarizmi",
+      "image": "/assets/eco.png",
+      "stats": "",
+      "features": ""
     },
     {
       "id": "club-robotics",
-      "title": "Robototexnika & AI Hub",
-      "category": "Sport",
-      "founder": "IT Kafedrasi",
-      "leader": "Tolibjonov Qudratjon",
-      "desc": "Xalqaro WRO (World Robot Olympiad) musobaqalari, avtonom tizimlar, dronlar dasturlash va sun'iy intellekt laboratoriyasi.",
-      "badge": "Muhandislik",
+      "title": "TedX Al-Khwarizmi Fergana",
+      "category": "Ijtimoiy",
+      "founder": "Ted Kafedrasi",
+      "leader": "Komilov Anasxon",
+      "desc": "Ted X Al-Khwarizmi is gives you opportunity to show yourself on stage and improve or illustrate you soft skills. Build up your social status.",
+      "badge": "Ijtomoiy",
       "color": "from-emerald-600 to-teal-500",
-      "telegram": "https://t.me/alXorazmiyfargonafiliali"
+      "telegram": "https://t.me/tedtalk_al_khwarzimi",
+      "image": "/assets/ted.png",
+      "stats": "",
+      "features": ""
     }
   ],
   "scrollNews": [],
@@ -393,7 +403,7 @@
       "id": "partner-tatu",
       "name": "TATU Farg'ona filiali",
       "tag": "Oliy ta'lim",
-      "logo": ""
+      "logo": "/assets/uploads/upload-1795714914824-284.png"
     },
     {
       "id": "partner-fstu",
@@ -411,7 +421,7 @@
       "id": "partner-youth",
       "name": "Yoshlar Ittifoqi",
       "tag": "Jamoat tashkiloti",
-      "logo": ""
+      "logo": "/assets/uploads/upload-1795715304360-7.jpg"
     },
     {
       "id": "partner-university",

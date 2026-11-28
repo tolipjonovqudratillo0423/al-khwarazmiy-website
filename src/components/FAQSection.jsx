@@ -18,7 +18,7 @@ export default function FAQSection() {
     },
     {
       q: "Uzoq tumanlardan kelgan o'quvchilar uchun yotoqxona bormi?",
-      a: "Ha, maktab hududida zamonaviy sharoitlarga ega, 3 mahal issiq ovqat bilan ta'minlangan, qulay va xavfsiz o'quvchilar turar joyi (yotoqxona) faoliyat yuritadi."
+      a: "Ha, maktab hududida zamonaviy sharoitlarga ega, 5 mahal ovqat bilan ta'minlangan, qulay va xavfsiz o'quvchilar turar joyi (yotoqxona) faoliyat yuritadi."
     },
     {
       q: "Qo'shimcha to'garaklar va laboratoriyalar mavjudmi?",
